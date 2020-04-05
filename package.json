@@ -1,0 +1,49 @@
+{
+  "name": "@stylelint/prettier-config",
+  "version": "1.0.0",
+  "description": "stylelint org's shareable config for prettier",
+  "keywords": [
+    "prettier",
+    "prettierconfig"
+  ],
+  "repository": "stylelint/prettier-config",
+  "license": "MIT",
+  "author": "stylelint",
+  "main": "index.js",
+  "files": [
+    ".prettierrc.js"
+  ],
+  "scripts": {
+    "format": "prettier . --write",
+    "lint": "npm-run-all --parallel lint:*",
+    "lint:formatting": "prettier . --check --ignore-path .gitignore",
+    "lint:js": "eslint . --ignore-path .gitignore",
+    "release": "np"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{js,json,md,yml}": "prettier --write"
+  },
+  "eslintConfig": {
+    "extends": [
+      "stylelint"
+    ]
+  },
+  "dependencies": {
+    "prettier-plugin-packagejson": "^2.1.2"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-stylelint": "^11.1.0",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.1.1",
+    "np": "^6.2.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.0.2"
+  }
+}

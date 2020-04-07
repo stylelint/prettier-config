@@ -1,6 +1,6 @@
 {
   "name": "@stylelint/prettier-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "stylelint org's shareable config for prettier",
   "keywords": [
     "prettier",

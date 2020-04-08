@@ -1,6 +1,6 @@
 # Changelog
 
-## Head
+## 2.0.0
 
 - Added: `trailingComma: 'all'`.
 

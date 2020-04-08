@@ -1,9 +1,13 @@
 # Changelog
 
+## Head
+
+- Added: `trailingComma: 'all'`.
+
 ## 1.0.1
 
-- Update dependencies
+- Fixed: update dependencies.
 
 ## 1.0.0
 
-- Initial release
+- Initial release.

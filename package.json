@@ -8,13 +8,13 @@
     "prettierconfig"
   ],
   "homepage": "https://github.com/stylelint/npm-package-json-lint-config/tree/master/packages/npm-package-json-lint-config#readme",
-  "bugs": {
-    "url": "https://github.com/stylelint/npm-package-json-lint-config/issues"
-  },
   "repository": "stylelint/prettier-config",
   "funding": {
     "type": "opencollective",
     "url": "https://opencollective.com/stylelint"
+  },
+  "bugs": {
+    "url": "https://github.com/stylelint/npm-package-json-lint-config/issues"
   },
   "license": "MIT",
   "author": "stylelint",
@@ -22,13 +22,17 @@
   "files": [
     ".prettierrc.js"
   ],
-  "scripts": {
-    "format": "prettier . --write",
-    "lint": "npm-run-all --parallel lint:*",
-    "lint:formatting": "prettier . --check --ignore-path .gitignore",
-    "lint:js": "eslint . --ignore-path .gitignore",
-    "lint:packagejson": "npmPkgJsonLint .",
-    "release": "np"
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": "^12",
+    "npm": "^6"
+  },
+  "eslintConfig": {
+    "extends": [
+      "stylelint"
+    ]
   },
   "husky": {
     "hooks": {
@@ -39,9 +43,9 @@
     "*.js": "eslint --cache --fix",
     "*.{js,json,md,yml}": "prettier --write"
   },
-  "eslintConfig": {
+  "npmpackagejsonlint": {
     "extends": [
-      "stylelint"
+      "@stylelint/npm-package-json-lint-config"
     ]
   },
   "dependencies": {},
@@ -56,16 +60,12 @@
     "npm-run-all": "^4.1.5",
     "prettier": "^2.0.4"
   },
-  "engines": {
-    "node": "^12",
-    "npm": "^6"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
-  "npmpackagejsonlint": {
-    "extends": [
-      "@stylelint/npm-package-json-lint-config"
-    ]
+  "scripts": {
+    "format": "prettier . --write",
+    "lint": "npm-run-all --parallel lint:*",
+    "lint:formatting": "prettier . --check --ignore-path .gitignore",
+    "lint:js": "eslint . --ignore-path .gitignore",
+    "lint:packagejson": "npmPkgJsonLint .",
+    "release": "np"
   }
 }

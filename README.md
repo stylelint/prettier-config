@@ -18,7 +18,7 @@ Add this to your `package.json`:
 
 ```json
 {
-  "prettier": "@stylelint/prettier-config"
+	"prettier": "@stylelint/prettier-config"
 }
 ```
 

@@ -9,7 +9,7 @@ module.exports = {
 	useTabs: true,
 	overrides: [
 		{
-			files: ['package.json', 'package-lock.json', '*.md'],
+			files: ['*.md'],
 			options: {
 				printWidth: 80,
 				singleQuote: false,

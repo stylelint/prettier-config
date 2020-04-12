@@ -7,14 +7,14 @@
     "prettier",
     "prettierconfig"
   ],
-  "homepage": "https://github.com/stylelint/npm-package-json-lint-config/tree/master/packages/npm-package-json-lint-config#readme",
+  "homepage": "https://github.com/stylelint/prettier/tree/master/packages/prettier-config#readme",
   "repository": "stylelint/prettier-config",
   "funding": {
     "type": "opencollective",
     "url": "https://opencollective.com/stylelint"
   },
   "bugs": {
-    "url": "https://github.com/stylelint/npm-package-json-lint-config/issues"
+    "url": "https://github.com/stylelint/prettier/issues"
   },
   "license": "MIT",
   "author": "stylelint",

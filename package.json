@@ -7,8 +7,6 @@
     "prettier",
     "prettierconfig"
   ],
-  "homepage": "https://github.com/stylelint/prettier/tree/master/packages/prettier-config#readme",
-  "repository": "stylelint/prettier-config",
   "funding": {
     "type": "opencollective",
     "url": "https://opencollective.com/stylelint"

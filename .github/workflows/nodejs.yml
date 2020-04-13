@@ -13,7 +13,7 @@ env:
   CI: true
 
 jobs:
-  lint:
+  test:
     name: Test on Node.js ${{ matrix.node }} and ${{ matrix.os }}
 
     runs-on: ${{ matrix.os }}

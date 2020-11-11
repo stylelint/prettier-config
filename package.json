@@ -1,12 +1,17 @@
 {
   "name": "@stylelint/prettier-config",
   "version": "2.0.0",
-  "description": "stylelint org's shareable config for prettier",
+  "description": "A stylelint shareable config for Prettier.",
   "keywords": [
+    "@stylelint",
     "prettier",
     "prettierconfig"
   ],
   "repository": "stylelint/prettier-config",
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/stylelint"
+  },
   "license": "MIT",
   "author": "stylelint",
   "main": "index.js",
@@ -15,10 +20,14 @@
   ],
   "scripts": {
     "format": "prettier . --write",
+    "jest": "jest",
     "lint": "npm-run-all --parallel lint:*",
     "lint:formatting": "prettier . --check --ignore-path .gitignore",
     "lint:js": "eslint . --ignore-path .gitignore",
-    "release": "np"
+    "lint:packagejson": "npmPkgJsonLint .",
+    "release": "np",
+    "pretest": "npm run lint",
+    "test": "jest"
   },
   "husky": {
     "hooks": {
@@ -35,18 +44,30 @@
     ]
   },
   "dependencies": {
+    "prettier": "^2.0.4",
     "prettier-plugin-packagejson": "^2.2.0"
   },
   "devDependencies": {
+    "@stylelint/npm-package-json-lint-config": "^2.0.0",
     "eslint": "^6.8.0",
     "eslint-config-stylelint": "^11.1.0",
     "husky": "^4.2.3",
+    "is-plain-obj": "^2.1.0",
+    "jest": "^25.3.0",
     "lint-staged": "^10.1.2",
     "np": "^6.2.0",
-    "npm-run-all": "^4.1.5",
-    "prettier": "^2.0.4"
+    "npm-run-all": "^4.1.5"
+  },
+  "engines": {
+    "node": "^12",
+    "npm": "^6"
   },
   "publishConfig": {
     "access": "public"
+  },
+  "npmpackagejsonlint": {
+    "extends": [
+      "@stylelint/npm-package-json-lint-config"
+    ]
   }
 }

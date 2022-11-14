@@ -14,16 +14,13 @@
     ".prettierrc.js"
   ],
   "scripts": {
+    "prepare": "husky install",
+    "test": "npm run lint",
     "format": "prettier . --write",
     "lint": "npm-run-all --parallel lint:*",
     "lint:formatting": "prettier . --check --ignore-path .gitignore",
     "lint:js": "eslint . --ignore-path .gitignore",
     "release": "np"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "lint-staged": {
     "*.js": "eslint --cache --fix",
@@ -32,19 +29,26 @@
   "eslintConfig": {
     "extends": [
       "stylelint"
-    ]
+    ],
+    "rules": {
+      "jest/no-deprecated-functions": "off"
+    },
+    "globals": {
+      "module": true,
+      "require": true
+    }
   },
   "dependencies": {
-    "prettier-plugin-packagejson": "^2.2.0"
+    "prettier-plugin-packagejson": "^2.3.0"
   },
   "devDependencies": {
-    "eslint": "^6.8.0",
-    "eslint-config-stylelint": "^11.1.0",
-    "husky": "^4.2.3",
-    "lint-staged": "^10.1.2",
-    "np": "^6.2.0",
+    "eslint": "^8.27.0",
+    "eslint-config-stylelint": "^17.0.0",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.0.3",
+    "np": "^7.6.2",
     "npm-run-all": "^4.1.5",
-    "prettier": "^2.0.4"
+    "prettier": "^2.7.1"
   },
   "publishConfig": {
     "access": "public"

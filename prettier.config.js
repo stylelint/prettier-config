@@ -1,6 +1,5 @@
-'use strict';
-
-module.exports = {
+/** @type {import("prettier").Options} */
+const config = {
 	arrowParens: 'always',
 	endOfLine: 'lf',
 	printWidth: 100,
@@ -19,4 +18,7 @@ module.exports = {
 			},
 		},
 	],
+	plugins: ['prettier-plugin-packagejson'],
 };
+
+export default config;

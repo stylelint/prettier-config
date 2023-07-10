@@ -1,6 +1,6 @@
 # Changelog
 
-## Head
+## 3.0.0
 
 - Removed: Prettier 2 support.
 - Removed: support for older Node.js versions than `14.18.0`.

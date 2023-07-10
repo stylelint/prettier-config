@@ -1,5 +1,10 @@
 # Changelog
 
+## Head
+
+- Removed: Prettier 2 support.
+- Changed: package type to pure ESM.
+
 ## 2.0.0
 
 - Added: `trailingComma: 'all'`.

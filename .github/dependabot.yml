@@ -1,0 +1,19 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: '/'
+    schedule:
+      interval: monthly
+    versioning-strategy: increase
+    labels:
+      - 'pr: dependencies'
+    groups:
+      dev-deps:
+        dependency-type: 'development'
+
+  - package-ecosystem: github-actions
+    directory: '/'
+    schedule:
+      interval: monthly
+    labels:
+      - 'pr: dependencies'

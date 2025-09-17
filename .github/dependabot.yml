@@ -10,6 +10,7 @@ updates:
     groups:
       dev-deps:
         dependency-type: 'development'
+        exclude-patterns: ['prettier']
 
   - package-ecosystem: github-actions
     directory: '/'

@@ -1,6 +1,6 @@
 # Changelog
 
-## Head
+## 4.0.0
 
 - Removed: support for older Node.js versions than `20.0.0`.
 

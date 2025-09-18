@@ -1,12 +1,22 @@
 {
   "name": "@stylelint/prettier-config",
   "version": "3.0.0",
-  "description": "stylelint org's shareable config for prettier",
+  "description": "A Stylelint shareable config for Prettier.",
   "keywords": [
     "prettier",
     "prettierconfig"
   ],
   "repository": "stylelint/prettier-config",
+  "funding": [
+    {
+      "type": "opencollective",
+      "url": "https://opencollective.com/stylelint"
+    },
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/stylelint"
+    }
+  ],
   "license": "MIT",
   "author": "stylelint",
   "type": "module",
@@ -19,6 +29,7 @@
     "lint": "npm-run-all --parallel lint:*",
     "lint:formatting": "prettier . --check",
     "lint:js": "eslint",
+    "lint:packagejson": "npmPkgJsonLint .",
     "prepare": "husky",
     "release": "np",
     "test": "npm run lint"
@@ -27,10 +38,14 @@
     "*.js": "eslint --cache --fix",
     "*.{js,json,md,yml}": "prettier --write"
   },
+  "npmpackagejsonlint": {
+    "extends": "@stylelint/npm-package-json-lint-config"
+  },
   "dependencies": {
     "prettier-plugin-packagejson": "^2.5.19"
   },
   "devDependencies": {
+    "@stylelint/npm-package-json-lint-config": "^5.1.0",
     "eslint": "^9.35.0",
     "eslint-config-stylelint": "^25.0.0",
     "husky": "^9.1.7",

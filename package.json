@@ -15,13 +15,13 @@
     "prettier.config.js"
   ],
   "scripts": {
-    "prepare": "husky install",
-    "test": "npm run lint",
     "format": "prettier . --write",
     "lint": "npm-run-all --parallel lint:*",
     "lint:formatting": "prettier . --check",
     "lint:js": "eslint . --ignore-path .gitignore",
-    "release": "np"
+    "prepare": "husky install",
+    "release": "np",
+    "test": "npm run lint"
   },
   "lint-staged": {
     "*.js": "eslint --cache --fix",
@@ -33,7 +33,7 @@
     ]
   },
   "dependencies": {
-    "prettier-plugin-packagejson": "^2.4.4"
+    "prettier-plugin-packagejson": "^2.5.19"
   },
   "devDependencies": {
     "eslint": "^8.44.0",

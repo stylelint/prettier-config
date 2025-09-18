@@ -19,7 +19,7 @@
     "lint": "npm-run-all --parallel lint:*",
     "lint:formatting": "prettier . --check",
     "lint:js": "eslint",
-    "prepare": "husky install",
+    "prepare": "husky",
     "release": "np",
     "test": "npm run lint"
   },

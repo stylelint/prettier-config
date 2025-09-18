@@ -18,7 +18,7 @@
     "format": "prettier . --write",
     "lint": "npm-run-all --parallel lint:*",
     "lint:formatting": "prettier . --check",
-    "lint:js": "eslint . --ignore-path .gitignore",
+    "lint:js": "eslint",
     "prepare": "husky install",
     "release": "np",
     "test": "npm run lint"
@@ -26,11 +26,6 @@
   "lint-staged": {
     "*.js": "eslint --cache --fix",
     "*.{js,json,md,yml}": "prettier --write"
-  },
-  "eslintConfig": {
-    "extends": [
-      "stylelint"
-    ]
   },
   "dependencies": {
     "prettier-plugin-packagejson": "^2.5.19"

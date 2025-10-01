@@ -10,6 +10,6 @@ on:
 
 jobs:
   lint:
-    uses: stylelint/.github/.github/workflows/lint.yml@5c1fac886fb5f8f74e29e133f36d242770d03ed3 # main
+    uses: stylelint/.github/.github/workflows/lint.yml@94de5d411af0abade18762a5ae243601d4bbfa98 # main
     permissions:
       contents: read

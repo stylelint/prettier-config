@@ -31,7 +31,6 @@
     "lint:js": "eslint",
     "lint:packagejson": "npmPkgJsonLint .",
     "prepare": "husky",
-    "release": "np",
     "test": "npm run lint"
   },
   "lint-staged": {
@@ -50,7 +49,6 @@
     "eslint-config-stylelint": "^25.0.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.0",
-    "np": "^10.2.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.6.2"
   },

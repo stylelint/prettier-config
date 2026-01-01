@@ -41,7 +41,7 @@
     "extends": "@stylelint/npm-package-json-lint-config"
   },
   "dependencies": {
-    "prettier-plugin-packagejson": "^2.5.19"
+    "prettier-plugin-packagejson": "^2.5.20"
   },
   "devDependencies": {
     "@stylelint/npm-package-json-lint-config": "^5.1.0",

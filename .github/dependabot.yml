@@ -20,5 +20,9 @@ updates:
       interval: monthly
     labels:
       - 'pr: dependencies'
+    groups:
+      stylelint-actions:
+        patterns: ['stylelint/.github/*']
     cooldown:
       default-days: 7
+      exclude: ['stylelint/.github/*']

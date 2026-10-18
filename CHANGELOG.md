@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.1.0
+
+- Changed: bump `prettier-plugin-packagejson` to `^3.0.2`.
+
 ## 4.0.0
 
 - Removed: support for older Node.js versions than `20.0.0`.
